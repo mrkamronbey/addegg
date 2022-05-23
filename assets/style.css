@@ -3901,11 +3901,14 @@ img {
     line-height: 12px;
     color: #7E7E7E;
 }
-/* .chat__main{
+.bx-edit{
+    font-size: 25px;
+}
+.message__icon{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-} */
+    justify-content: center;
+    padding: 7px 0 0 0 !important;
+}
    /* follow html  */
 /*  Masssages */
