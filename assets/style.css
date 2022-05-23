@@ -3069,7 +3069,7 @@ img {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    position: relative;
+    position: relative
 }
 
 .app .profile__main {
@@ -3849,6 +3849,11 @@ img {
     line-height: 18px;
     color: #000000;
    }
+   .hr{
+       margin: 0 auto;
+        border: 1px solid #D9D9D9;
+        width: 500px;
+   }
    ._capitalize{
         font-weight: 700 !important ;
         font-size: 15px;
@@ -3896,11 +3901,11 @@ img {
     line-height: 12px;
     color: #7E7E7E;
 }
-.message__icon > .bx-edit{
+.bx-edit{
     font-size: 25px;
+    color: #fff !important;
 }
 .message__icon{
-    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
