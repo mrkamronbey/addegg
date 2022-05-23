@@ -3818,7 +3818,7 @@ img {
    }
    .section__top-background{
        background: #fff !important;
-       /* color: #000000 !important; */
+       color: #000000 !important;
        border-bottom: 1px solid #909090;
    }
    .post__message-date{
@@ -3898,7 +3898,6 @@ img {
 }
 .message__icon > .bx-edit{
     font-size: 25px;
-    color: #fff !important;
 }
 .message__icon{
     color: #fff;
