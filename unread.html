@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://add-egg-dev.u-w.me/profile -->
+<html class="common" lang="ru">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="Kzu3W3RUEUefxhsgk8IA1zyAIuHqBTqc9TUjFI7S" />
+
+    <title>MESSAGE</title>
+
+    <!-- Styles -->
+    <link href="./assets/style.css" rel="stylesheet" />
+    <link href="./assets/custom.css" rel="stylesheet" />
+    <!-- Font Awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        button.audioControl {
+            z-index: 9;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        button.audioControl img {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        .post .progress {
+            height: 10px;
+            padding: 0;
+            position: absolute;
+            width: 100%;
+            bottom: -10px;
+            z-index: 9;
+        }
+
+        input[type="search"]::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+            height: 10px;
+            width: 10px;
+            background-image: url("data:image/svg+xml,%3Csvg width='10px' height='10px' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath d='M 10,10 l 90,90 M 100,10 l -90,90' stroke='white' stroke-width='10' /%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+
+<body class="common__body">
+    <div id="app" class="app">
+        <div class="app__rotate">
+            <img src="./assets/rotate.png" alt="" />
+            <div class="app__rotate-title">
+                Для более комфортного использования, <br />
+                поверните Ваше устройство вертикально
+            </div>
+        </div>
+        <header class="header"></header>
+        <main class="main">
+            <div data-popup="header-menu" class="popup">
+                <div class="popup__scroll _top">
+                    <div class="popup__content _bg">
+                        <div class="menu">
+                            <div class="menu__item">
+                                <form id="uploadFileAvatar" enctype="multipart/form-data" action="#" method="POST"
+                                    style="margin: 0px">
+                                    <input type="hidden" name="_token"
+                                        value="Kzu3W3RUEUefxhsgk8IA1zyAIuHqBTqc9TUjFI7S" />
+                                    <label class="record__multimedia-item"><span>заменить аватарку</span>
+                                        <input type="file" name="file-avatar" accept="image/*"
+                                            hidden="hidden" /></label>
+                                </form>
+                            </div>
+                            <a href="#" class="menu__item">продвигать</a>
+                            <a data-popup="record_5" data-type-popup="greeting" href="#"
+                                class="menu__item popupActivation">изменить приветствие</a>
+                            <div id="copyLinkBlock" class="menu__item">
+                                <div class="tooltip">
+                                    <div onclick="myFunction()" onmouseout="outFunc()"
+                                        style="font-size: 20px; cursor: pointer">
+                                        <i class="icon icon-share"></i>
+                                        <a id="myTooltip" class="menu__item">скопировать ссылку</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" onclick="event.preventDefault();
+                   document.getElementById(&#39;logout-form&#39;).submit();" class="menu__item">
+                                выход
+                            </a>
+                            <form id="logout-form" action="#" method="POST" class="d-none">
+                                <input type="hidden" name="_token" value="Kzu3W3RUEUefxhsgk8IA1zyAIuHqBTqc9TUjFI7S" />
+                            </form>
+                        </div>
+                    </div>
+                    <div class="popup__scroll-bottom">
+                        <div class="popup__scroll-icon">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile section _with-control">
+                <div class="section__header-top">
+                    <div class="profile__header">
+                        <div class="profile__title">Сообщения</div>
+                        <a href="#" data-popup="header-menu"class="profile__menu popupActivation"><i class="icon icon-menu"></i></a>
+                      </div>
+                </div>
+                <div class="post__info">
+                    <div class="post__list">
+                        <div class="post-list-buttons">
+                            <a href="message.html" class="post__list _btn ">все чаты</a>
+                            <a href="unread.html" class="post__list _btn activbtn">непрочитанные</a>
+                            <a href="online.html" class="post__list _btn">в сети</a>
+                          </div>
+                    </div>
+                    <!-- message -->
+                    <div class="post__main">
+                        <div class="post__audio">
+                            <span class="post__online"></span>
+                          <img class="post__audio-img" src="./assets/1629706916_phpohvowo.jpg" alt="" />
+                          <span class="current-time post__duration"></span>
+                        </div>
+                        <div class="post__info">
+                          <div class="post__header post__header-like">
+                            <div class="post__title">
+                              <a href="/profile/BOGDAN KRAVCHENKO">BOGDAN KRAVCHENKO</a>
+                              <div class="post__title _icon">
+                                <i class="icon icon-headphone"></i>
+                                <i class="icon icon-star"></i>
+                              </div>
+                              <div class="post__title-message">
+                                Привет. На фортуне, где от ди...
+                              </div>
+                            </div>
+                            <div class="post__title _flex">
+                                <span>13:50</span>
+                                <span class="post__mesagge-span">33</span>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="post__main">
+                        <div class="post__audio">
+                          <img class="post__audio-img" src="./assets/1629706916_phpohvowo.jpg" alt="" />
+                          <span class="current-time post__duration"></span>
+                        </div>
+                        <div class="post__info">
+                          <div class="post__header post__header-like">
+                            <div class="post__title">
+                              <a href="/profile/BOGDAN KRAVCHENKO">BOGDAN KRAVCHENKO</a>
+                              <div class="post__title _icon">
+                                <i class="icon icon-headphone"></i>
+                                <i class="icon icon-star"></i>
+                              </div>
+                              <div class="post__title-message">
+                                Привет. На фортуне, где от ди...
+                              </div>
+                            </div>
+                            <div class="post__title _flex">
+                                <span>13:50</span>
+                                <span class="post__mesagge-span">33</span>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="post__main">
+                        <div class="post__audio">
+                            <span class="post__online"></span>
+                          <img class="post__audio-img" src="./assets/1629706916_phpohvowo.jpg" alt="" />
+                          <span class="current-time post__duration"></span>
+                        </div>
+                        <div class="post__info">
+                          <div class="post__header post__header-like">
+                            <div class="post__title">
+                              <a href="/profile/BOGDAN KRAVCHENKO">BOGDAN KRAVCHENKO</a>
+                              <div class="post__title _icon">
+                                <i class="icon icon-headphone"></i>
+                                <i class="icon icon-star"></i>
+                              </div>
+                              <div class="post__title-message">
+                                Привет. На фортуне, где от ди...
+                              </div>
+                            </div>
+                            <div class="post__title _flex">
+                                <span>13:50</span>
+                                <span class="post__mesagge-span">33</span>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="post__main">
+                        <div class="post__audio">
+                          <img class="post__audio-img" src="./assets/1629706916_phpohvowo.jpg" alt="" />
+                          <span class="current-time post__duration"></span>
+                        </div>
+                        <div class="post__info">
+                          <div class="post__header post__header-like">
+                            <div class="post__title">
+                              <a href="/profile/BOGDAN KRAVCHENKO">BOGDAN KRAVCHENKO</a>
+                              <div class="post__title _icon">
+                                <i class="icon icon-headphone"></i>
+                                <i class="icon icon-star"></i>
+                              </div>
+                              <div class="post__title-message">
+                                Привет. На фортуне, где от ди...
+                              </div>
+                            </div>
+                            <div class="post__title _flex">
+                                <span>13:50</span>
+                                <span class="post__mesagge-span">33</span>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="post__main">
+                        <div class="post__audio">
+                            <span class="post__online"></span>
+                          <img class="post__audio-img" src="./assets/1629706916_phpohvowo.jpg" alt="" />
+                          <span class="current-time post__duration"></span>
+                        </div>
+                        <div class="post__info">
+                          <div class="post__header post__header-like">
+                            <div class="post__title">
+                              <a href="/profile/BOGDAN KRAVCHENKO">BOGDAN KRAVCHENKO</a>
+                              <div class="post__title _icon">
+                                <i class="icon icon-headphone"></i>
+                                <i class="icon icon-star"></i>
+                              </div>
+                              <div class="post__title-message">
+                                Привет. На фортуне, где от ди...
+                              </div>
+                            </div>
+                            <div class="post__title _flex">
+                                <span>13:50</span>
+                                <span class="post__mesagge-span">33</span>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="post__main">
+                        <div class="post__audio">
+                          <img class="post__audio-img" src="./assets/1629706916_phpohvowo.jpg" alt="" />
+                          <span class="current-time post__duration"></span>
+                        </div>
+                        <div class="post__info">
+                          <div class="post__header post__header-like">
+                            <div class="post__title">
+                              <a href="/profile/BOGDAN KRAVCHENKO">BOGDAN KRAVCHENKO</a>
+                              <div class="post__title _icon">
+                                <i class="icon icon-headphone"></i>
+                                <i class="icon icon-star"></i>
+                              </div>
+                              <div class="post__title-message">
+                                Привет. На фортуне, где от ди...
+                              </div>
+                            </div>
+                            <div class="post__title _flex">
+                                <span>13:50</span>
+                                <span class="post__mesagge-span">33</span>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="post__main">
+                        <div class="post__audio">
+                            <span class="post__online"></span>
+                          <img class="post__audio-img" src="./assets/1629706916_phpohvowo.jpg" alt="" />
+                          <span class="current-time post__duration"></span>
+                        </div>
+                        <div class="post__info">
+                          <div class="post__header post__header-like">
+                            <div class="post__title">
+                              <a href="/profile/BOGDAN KRAVCHENKO">BOGDAN KRAVCHENKO</a>
+                              <div class="post__title _icon">
+                                <i class="icon icon-headphone"></i>
+                                <i class="icon icon-star"></i>
+                              </div>
+                              <div class="post__title-message">
+                                Привет. На фортуне, где от ди...
+                              </div>
+                            </div>
+                            <div class="post__title _flex">
+                                <span>13:50</span>
+                                <span></span>
+                                <span class="post__mesagge-span">33</span>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    <!-- message -->
+                </div>
+
+                <!--  navigation button -->
+
+                <div class="navigation">
+                    <div class="navigation__item navigate">
+                      <a href="main.html" class="link-full"></a>
+                      <img src="assets/Vector 30.png" alt="">
+                      <span>ГЛАВНАЯ</span>
+                    </div>
+                    <div class="navigation__item _active navigate">
+                      <a href="#" class="link-full"></a>
+                      <i class="icon icon-mail"></i>
+                      <span>СООБЩЕНИЯ</span>
+                    </div>
+                    <div class="navigation__item navigate">
+                      <a href="search.html" class="link-full"></a>
+                      <i class="icon icon-search"></i>
+                      <span>ПОИСК</span>
+                    </div>
+                    <div class="navigation__item _new navigate">
+                      <a href="notification.html" class="link-full"></a>
+                      <i class="icon icon-bell"></i>
+                      <span>УВЕДОМЛЕНИЯ</span>
+                    </div>
+                    <div class="navigation__item  navigate">
+                      <a href="profile.html" class="link-full"></a>
+                      <i class="icon icon-user"></i>
+                      <span>Профиль</span>
+                    </div>
+                  </div>
+            </div>
+
+            <input type="hidden" id="linkForCopy" value="add-egg-dev.u-w.me/profile/BOGDAN KRAVCHENKO" />
+
+
+
+
+            <div data-popup="people" class="popup">
+                <div class="popup__scroll _bottom">
+                    <div class="popup__content _bg">
+                        <div class="sorting"></div>
+                        <div class="likes-list"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-popup="comments" data-to-id="" data-to-type="" class="popup">
+                <div class="popup__scroll _bottom">
+                    <div class="popup__content _bg">
+                        <div class="sorting">
+                            <a href="#" class="sorting__item _active"><span>дата</span></a>
+                            <a href="#" class="sorting__item"><i class="fa-regular fa-heart"></i></a>
+                            <a href="#" class="sorting__item"><i class="fa-regular fas fa-microphone-alt-thick"></i></a>
+                        </div>
+                        <div class="comments-list"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="passwordError" data-popup="password_error" class="popup">
+                    <div class="popup__scroll">
+                        <div class="popup__content">
+                            <div class="confirmation notification"
+                                style="color: black; height: 34px; line-height: 28px">
+                                введен неверный пароль
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer"></footer>
+        <div data-popup="confirmation" class="popup">
+            <div class="popup__scroll">
+                <div class="popup__content">
+                    <div class="confirmation">
+                        <div class="confirmation__main">
+                            <div class="confirmation__title">Подтверждение</div>
+                            <div class="confirmation__description">заблокировать</div>
+                            <div class="confirmation__name">sabina.kravchenko</div>
+                        </div>
+                        <div class="confirmation__img">
+                            <img src="./assets/post-mini.jpeg" />
+                        </div>
+                        <div class="confirmation__actions">
+                            <a href="#" class="confirmation__action">yes</a><a href="#"
+                                class="confirmation__action">no</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-popup="confirmation_2" class="popup">
+            <div class="popup__scroll">
+                <div class="popup__content">
+                    <div class="confirmation">
+                        <div class="confirmation__main">
+                            <div class="confirmation__title">Подтверждение</div>
+                            <div class="confirmation__description">
+                                переслать сообщение для
+                            </div>
+                            <div class="confirmation__name">sabina.kravchenko</div>
+                        </div>
+                        <div class="confirmation__img">
+                            <img src="./assets/post-mini.jpeg" />
+                        </div>
+                        <div class="confirmation__actions">
+                            <a href="#" class="confirmation__action">yes</a><a href="#"
+                                class="confirmation__action">no</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-popup="confirmation_3" class="popup">
+            <div class="popup__scroll">
+                <div class="popup__content">
+                    <div class="confirmation">
+                        <div class="confirmation__main">
+                            <div class="confirmation__title">Подтверждение</div>
+                            <div class="confirmation__description">пожаловаться на</div>
+                            <div class="confirmation__name">sabina.kravchenko</div>
+                        </div>
+                        <div class="confirmation__img">
+                            <img src="./assets/post-mini.jpeg" />
+                        </div>
+                        <div class="confirmation__actions">
+                            <a href="#" class="confirmation__action">yes</a><a href="#"
+                                class="confirmation__action">no</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-popup="confirmation_4" class="popup">
+            <div class="popup__scroll">
+                <div class="popup__content">
+                    <div class="confirmation">
+                        <div class="confirmation__main">
+                            <div class="confirmation__title">Подтверждение</div>
+                            <div class="confirmation__description">удалить пост?</div>
+                        </div>
+                        <div class="confirmation__actions">
+                            <a id="confirmPostDeleteSubmit" class="confirmation__action"
+                                style="cursor: pointer">yes</a><a
+                                class="confirmation__action confirmation4__action-close" style="cursor: pointer">no</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-popup="record" class="popup">
+            <div class="popup__scroll _bottom">
+                <div class="popup__content _bg">
+                    <div class="record section">
+                        <div class="record__header">
+                            <div class="record-play">
+                                <div class="record-play__progress"></div>
+                                <a href="#" class="record-play__button"><i class="icon icon-play_alt"><span
+                                            class="path1"></span><span class="path2"></span></i></a><a href="#"
+                                    class="record-play__close"><i class="icon icon-close"></i></a>
+                            </div>
+                        </div>
+                        <div class="record__picture">
+                            <a href="#" class="record__picture-close"><i class="icon icon-close"></i></a><img
+                                src="./assets/post.png" class="record__picture-img" />
+                        </div>
+                        <a href="#" class="record__button"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-popup="record_3" class="popup">
+            <div class="popup__scroll _bottom">
+                <div class="popup__content _bg">
+                    <div class="record section">
+                        <div class="record__header">
+                            <div class="record-play">
+                                <div class="record-play__progress" style="width: 70%"></div>
+                                <a href="#" class="record-play__button"><i class="icon icon-pause"><span
+                                            class="path1"></span><span class="path2"></span><span
+                                            class="path3"></span><span class="path4"></span></i></a><a href="#"
+                                    class="record-play__close"><i class="icon icon-close"></i></a>
+                            </div>
+                        </div>
+                        <div class="record__multimedia">
+                            <a href="#" class="record__multimedia-item _active"><i class="icon icon-picture"></i></a><a
+                                href="#" class="record__multimedia-item"><i class="icon icon-camera"></i></a>
+                        </div>
+                        <a href="#" class="record__button _active"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-popup="record_4" class="popup">
+            <div class="popup__scroll _bottom">
+                <div class="popup__content _bg">
+                    <div class="record section">
+                        <div class="record__header">
+                            <div class="record-play">
+                                <div class="record-play__progress"></div>
+                                <a href="#" class="record-play__button _active"><i class="icon icon-play_alt"><span
+                                            class="path1"></span><span class="path2"></span></i></a><a href="#"
+                                    class="record-play__close"><i class="icon icon-close"></i></a>
+                            </div>
+                        </div>
+                        <div class="record__multimedia">
+                            <a href="#" class="record__multimedia-item"><i class="icon icon-picture"></i></a><a href="#"
+                                class="record__multimedia-item _active"><i class="icon icon-camera"></i></a>
+                        </div>
+                        <a href="#" class="record__button"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div data-popup="record_5" class="popup popup_record">
+                <div class="popup__scroll _bottom">
+                    <div class="popup__content _bg">
+                        <div class="record section">
+                            <div class="record__header">
+                                <!---->
+                                <!---->
+                            </div>
+                            <div class="record__multimedia">
+                                <form id="uploadPostAudio" enctype="multipart/form-data" method="POST"
+                                    style="margin: 0px">
+                                    <label class="record__multimedia-item"><a class="record__multimedia-item"
+                                            style="cursor: pointer"><i class="icon icon-music"></i></a>
+                                        <input type="file" name="file" accept=".mpeg,.mpga,.mp3,.wav"
+                                            hidden="hidden" /></label>
+                                </form>
+                                <div class="record__multimedia-item record__multimedia-item_record">
+                                    <i class="icon icon-microphone"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-popup="record_2" class="popup">
+                <div class="popup__scroll _bottom">
+                    <div class="popup__content _bg">
+                        <div class="record section">
+                            <div class="record__header">
+                                <div class="record-play">
+                                    <canvas id="progress" height="100%" class="record-play__progress"
+                                        style="width: 236px; background: none"></canvas>
+                                    <audio id="audio"></audio>
+                                    <button id="audioControl" style="z-index: 99999">
+                                        <img src="./assets/play_alt.svg" />
+                                    </button>
+                                    <form enctype="multipart/form-data" method="POST" style="margin: 0px">
+                                        <label class="record__multimedia-item"><a class="record-play__close"
+                                                style="cursor: pointer"><i class="icon icon-close"></i></a></label>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="record__multimedia">
+                                <form enctype="multipart/form-data" method="POST" style="margin: 0px">
+                                    <label class="record__multimedia-item"><a class="record__multimedia-item"
+                                            style="cursor: pointer"><i class="icon icon-picture"></i></a>
+                                        <input type="file" name="file" accept=".jpeg,.png,.jpg,.gif,.svg"
+                                            hidden="hidden" /></label>
+                                </form>
+                                <a data-popup="video_cam" class="record__multimedia-item popupActivation"
+                                    style="cursor: pointer"><i class="icon icon-camera"></i></a>
+                            </div>
+                            <a class="record__button" style="cursor: pointer"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="videoCam" data-popup="video_cam" class="popup">
+                <div class="popup__scroll">
+                    <div class="popup__content">
+                        <div class="confirmation" style="width: 100%">
+                            <div id="videoContent"></div>
+                            <video id="video" autoplay="autoplay" style="width: 100%"></video>
+                            <button id="snap">Сделать снимок</button>
+                            <canvas id="canvas"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-popup="record_6" class="popup">
+            <div class="popup__scroll _bottom">
+                <div class="popup__content _bg">
+                    <div class="record section">
+                        <div class="record__header">
+                            <div class="record__note">удерживайте для записи</div>
+                        </div>
+                        <div class="record__multimedia">
+                            <a href="#" class="record__multimedia-item"><i class="icon icon-music"></i></a><a href="#"
+                                class="record__multimedia-item"><i class="icon icon-microphone"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-popup="record_7" class="popup">
+            <div class="popup__scroll _bottom">
+                <div class="popup__content _bg">
+                    <div class="record section">
+                        <div class="record__header">
+                            <div class="record__note _recording">00:06</div>
+                        </div>
+                        <div class="record__multimedia">
+                            <a href="#" class="record__multimedia-item _hidden"><i class="icon icon-music"></i></a><a
+                                href="#" class="record__multimedia-item _active"><i
+                                    class="icon icon-microphone"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./assets/jquery.min.js.download"></script>
+    <script src="./assets/app.js.download" defer=""></script>
+
+    <script type="text/javascript">
+        let audioFile = null;
+        let postId = null;
+        let audioGreeting = null;
+
+        function confirmDeletePost(id) {
+            let popupDeletePost = $('.popup[data-popup="confirmation_4"]');
+            popupDeletePost[0].classList.add("active");
+            postId = id;
+        }
+
+        function togglePlaying(postId, type, node) {
+            let idPrefix;
+            if (type === "post") {
+                idPrefix = "#postId-";
+            } else {
+                idPrefix = "#commentId-";
+            }
+
+            if (document.getElementById("profilePlay") !== null) {
+                audioGlobal.pause();
+                audioGlobal.currentTime = 0;
+                document.getElementById("profilePlay").style.display = "flex";
+                document.getElementById("profilePause").style.display = "none";
+            }
+            const $post = node ? $(node).closest(".post") : $(idPrefix + postId);
+
+            if (audioFile) {
+                let text = "updateBar('" + postId + "', '" + type + "', this)";
+                let currAudio = $(audioFile).attr("ontimeupdate");
+                let $audioPost = $(audioFile).closest(".post");
+                // if (currAudio !== text) {
+                if (!$audioPost.is($post)) {
+                    let previousAudio = $(audioFile).attr("data-post-id");
+                    let $previousImg = $audioPost.find("button img");
+                    let imgSrc = $previousImg.attr("src");
+
+                    if (imgSrc === "/img/pause.svg") {
+                        $previousImg.attr("src", "/img/play_alt.svg");
+                    }
+
+                    let canvas = $audioPost.find(".progress")[0];
+                    if (canvas) {
+                        let context = canvas.getContext("2d");
+                        context.clearRect(0, 0, canvas.width, canvas.height);
+                    }
+                    audioFile.pause();
+                    audioFile.currentTime = 0;
+                    audioFile = null;
+                }
+            }
+            audioFile = $post.find(".audio")[0];
+            let ctrl = $post.find(".audioControl")[0];
+            let imgSrc = $post.find(".audioControl img").attr("src");
+
+            let audioEl = audioFile;
+            let play = imgSrc === "/img/play_alt.svg";
+            let method;
+
+            if (play) {
+                ctrl.innerHTML =
+                    `<img src="/img/pause.svg" class="audio__icon audio__icon_pause" data-post-id="${postId}" data-post-type="${type}">`;
+                method = "play";
+            } else {
+                ctrl.innerHTML = '<img src="/img/play_alt.svg">';
+                method = "pause";
+            }
+
+            audioEl[method]();
+        }
+
+        function updateBar(postId, type, node) {
+            let idPrefix;
+            let appWidth = $("#app").width();
+            if (type === "post") {
+                idPrefix = "#postId-";
+            } else {
+                idPrefix = "#commentId-";
+            }
+            let ctrl, canvas, canvasBlock, currentTimeEl;
+            const $post = node ? $(node).closest(".post") : $(idPrefix + postId);
+
+            ctrl = $post.find(".audioControl")[0];
+            canvas = $post.find(".progress")[0].getContext("2d");
+            canvasBlock = $post.find(".progress")[0];
+            currentTimeEl = $post.find(".current-time")[0];
+
+            canvasBlock.width = appWidth;
+            let canvasWidth = appWidth;
+            let audioEl = audioFile;
+            canvas.clearRect(0, 0, canvasWidth, 100);
+            canvas.fillStyle = "#fff";
+            canvas.fillRect(0, 0, canvasWidth, 100);
+
+            let currentTime = audioEl ? audioEl.currentTime : null;
+            let duration = audioEl ? audioEl.duration : null;
+
+            if (currentTime === duration) {
+                ctrl.innerHTML = '<img src="/img/play_alt.svg">';
+            }
+
+            currentTimeEl.innerHTML = convertElapsedTime(currentTime);
+
+            let percentage = currentTime / duration;
+            let progress = canvasWidth * percentage;
+
+            let gradient = canvas.createLinearGradient(0, 0, 0, 180);
+            gradient.addColorStop(0, "#6cd3ff");
+            gradient.addColorStop(0.4, "rgba(198,231,248)");
+            gradient.addColorStop(0.7, "#fff");
+
+            canvas.fillStyle = gradient;
+            canvas.fillRect(0, 0, progress, 500);
+        }
+
+        function convertElapsedTime(inputSeconds) {
+            let seconds = Math.floor(inputSeconds % 60);
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
+            let minutes = Math.floor(inputSeconds / 60);
+
+            return minutes + ":" + seconds;
+        }
+
+    // document.addEventListener('ended', e => {
+    //     const target = e.target.closest('.audio');
+    //     if (!target) {
+    //         return;
+    //     }
+    //     target.currentTime = 0;
+    // });
+    </script>
+
+    <script type="text/javascript">
+        function myFunction() {
+            let copyText = document.getElementById("linkForCopy");
+            navigator.clipboard.writeText(copyText.value);
+
+            let tooltip = document.getElementById("myTooltip");
+            tooltip.innerHTML = "скопировано: " + copyText.value;
+        }
+
+        function outFunc() {
+            let tooltip = document.getElementById("myTooltip");
+            tooltip.innerHTML = "скопировать ссылку";
+        }
+
+        function confirmSubscribe(id = "") {
+            $(".popup.active").removeClass("active");
+            $(`.popup[data-popup="confirmation_subscribe${id}"]`).addClass(
+                "active"
+            );
+        }
+
+        function confirmUnsubscribe(id = "") {
+            $(".popup.active").removeClass("active");
+            $(`.popup[data-popup="confirmation_unsubscribe"]${id}`).addClass(
+                "active"
+            );
+        }
+
+        function confirmBlockUser(id = "") {
+            const selector = `.popup[data-popup="confirmation_block_user${id}"]`;
+            console.log(selector);
+            let popupBlockUser = $(selector);
+            popupBlockUser[0].classList.add("active");
+        }
+
+        function confirmUnBlockUser(id = "") {
+            let popupBlockUser = $(
+                `.popup[data-popup="confirmation_unblock_user${id}"]`
+            );
+            popupBlockUser[0].classList.add("active");
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            let isHasGreetingAudio = document.getElementById("greetingAudio");
+            let greetingAudio = $("#greetingAudio").attr("src");
+            audioGlobal = new Audio(greetingAudio);
+            let playAudioButton = document.getElementById("profilePlay");
+            let pauseAudioButton = document.getElementById("profilePause");
+
+            if (isHasGreetingAudio !== null) {
+                playAudioButton.addEventListener("click", function () {
+                    if (audioFile) {
+                        audioFile.currentTime = 0;
+                        audioFile["pause"]();
+                        audioFile = null;
+                        $('.post__main .audioControl img[src = "/img/pause.svg"]').attr(
+                            "src",
+                            "/img/play_alt.svg"
+                        );
+                    }
+
+                    audioGlobal.play();
+                    playAudioButton.style.display = "none";
+                    pauseAudioButton.style.display = "flex";
+                });
+
+                pauseAudioButton.addEventListener("click", function () {
+                    audioGlobal.pause();
+                    pauseAudioButton.style.display = "none";
+                    playAudioButton.style.display = "flex";
+                });
+
+                audioGlobal.addEventListener("ended", function () {
+                    pauseAudioButton.style.display = "none";
+                    playAudioButton.style.display = "flex";
+                });
+            }
+
+            if (document.getElementById("uploadFileAvatar")) {
+                document
+                    .getElementById("uploadFileAvatar")
+                    .addEventListener("change", function (e) {
+                        $("#uploadFileAvatar").submit();
+                    });
+            }
+
+            if (document.getElementById("uploadFileAvatar2")) {
+                document
+                    .getElementById("uploadFileAvatar2")
+                    .addEventListener("change", function (e) {
+                        $("#uploadFileAvatar2").submit();
+                    });
+            }
+
+            let buttonHide = document.querySelector(".confirmation__action-close");
+            buttonHide &&
+                buttonHide.addEventListener("click", function () {
+                    $(".popup").removeClass("active");
+                });
+
+            let buttonHide2 = document.querySelector(
+                ".confirmation2__action-close"
+            );
+            buttonHide2 &&
+                buttonHide2.addEventListener("click", function () {
+                    $(".popup").removeClass("active");
+                });
+
+            let buttonHide3 = document.querySelector(
+                ".confirmation3__action-close"
+            );
+            buttonHide3 &&
+                buttonHide3.addEventListener("click", function () {
+                    $(".popup").removeClass("active");
+                });
+
+            $("#confirmationSubscribeSubmit").click(function () {
+                $("#formSubscribe").submit();
+            });
+
+            $("#confirmationUnsubscribeSubmit").click(function () {
+                $("#formUnsubscribe").submit();
+            });
+
+            $("#confirmBlokUserSubmit").click(function () {
+                $("#formBlockUser").submit();
+            });
+            $("#confirmUnBlokUserSubmit").click(function () {
+                $("#formUnBlockUser").submit();
+            });
+
+            let listElm = document.documentElement;
+            let postsList = document.querySelector(".post-list");
+
+            // Add 2 items.
+            let nextItem = 1;
+            let canLoadMore = true;
+            const locate = document.location.href;
+            let loadMore = function (page) {
+                if (!canLoadMore) {
+                    return;
+                }
+                $.ajax({
+                    url: locate + "?page=" + page,
+                    type: "get",
+                    beforeSend: function () {
+                        $(".ajax-load").show();
+                    },
+                })
+                    .done(function (data) {
+                        if (!data || data.html === "") {
+                            canLoadMore = false;
+                            $(".ajax-load").hide().remove();
+                            $(window).off("load scroll");
+                            return;
+                        } else {
+                            $(".post-list").append(data.html);
+                            $(".ajax-load").hide();
+                        }
+                        checkHeight();
+                    })
+                    .fail(function (jqXHR, ajaxOptions, thrownError) {
+                        // alert('server not responding...');
+                    });
+            };
+
+            let checkHeight = function () {
+                if (
+                    postsList.scrollTop + window.innerHeight + 100 >=
+                    postsList.scrollHeight
+                ) {
+                    nextItem++;
+                    loadMore(nextItem);
+                }
+            };
+
+            checkHeight();
+
+            // Detect when scrolled to bottom.
+            $(window).on("load scroll", function () {
+                let firstTime = new Date();
+
+                if (
+                    window.pageYOffset + window.innerHeight + 100 >=
+                    listElm.scrollHeight
+                ) {
+                    let secondTime = new Date();
+                    if (firstTime.getSeconds() === secondTime.getSeconds()) {
+                        nextItem++;
+                        loadMore(nextItem);
+                    }
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            let buttonHide4 = document.querySelector(
+                ".confirmation4__action-close"
+            );
+            buttonHide4.addEventListener("click", function () {
+                $(".popup").removeClass("active");
+            });
+
+            $("#confirmPostDeleteSubmit").click(function () {
+                let deleteForm = $("#deleteFormPost" + postId);
+                $(deleteForm).submit();
+            });
+
+            $(".record__multimedia-item").click(function () {
+                $(".record__multimedia-item").removeClass("_active");
+                $(this).addClass("_active");
+            });
+
+            $(".record__button").click(function () {
+                $(".record__multimedia-item").removeClass("_active");
+                // $(this).css("background", "url('/img/logo-shadowed.svg') no-repeat center");
+                // $(this).css("background", "url('/img/logo-shadowed.svg') no-repeat center");
+                $(this).css("background-size", "contain");
+            });
+
+            $(".record__multimedia-item_record").click(function (e) {
+                return false;
+            });
+            $(document).on("click", ".post__action_like", function (e) {
+                e.preventDefault();
+                let isActive = $(this).hasClass("_active");
+                let parentThis = $(this).closest(".post__main")[0];
+                let postId = $(parentThis).attr("data-id");
+                let isComment = $(parentThis).hasClass("commentPost");
+                let isMessage = $(parentThis).hasClass("messagePost");
+
+                let url = "/posts/like/";
+                let type = "post";
+                let elemIdPrefix = "#postId-";
+
+                if (isComment) {
+                    url = "/comments/like/";
+                    type = "comment";
+                    elemIdPrefix = "#commentId-";
+                }
+
+                if (isMessage) {
+                    url = "/messenger/like/";
+                    type = "message";
+                }
+
+                $.ajax({
+                    url: url + postId,
+                    type: "POST",
+                    data: {
+                        _token: "Kzu3W3RUEUefxhsgk8IA1zyAIuHqBTqc9TUjFI7S",
+                        type: type,
+                    },
+                    context: document.body,
+                    success: function (data) {
+                        let likes = $(
+                            elemIdPrefix +
+                            postId +
+                            " " +
+                            ":nth-child(2) .post__actions .post__action:nth-child(2)"
+                        );
+                        let likesText = likes.eq(0).text();
+                        let likesCount = +likesText;
+                        if (isActive) {
+                            $(elemIdPrefix + postId + " " + ":first-child").removeClass(
+                                "_active"
+                            );
+                            $(elemIdPrefix + postId + " " + ":first-child i").removeClass(
+                                "_shadowed"
+                            );
+                            $(elemIdPrefix + postId + " " + ":nth-child(2)").removeClass(
+                                "_active"
+                            );
+
+                            likesCount -= 1;
+                        } else {
+                            $(elemIdPrefix + postId + " " + ":first-child").addClass(
+                                "_active"
+                            );
+                            $(elemIdPrefix + postId + " " + ":first-child i").addClass(
+                                "_shadowed"
+                            );
+                            $(elemIdPrefix + postId + " " + ":nth-child(2)").addClass(
+                                "_active"
+                            );
+                            likesCount += 1;
+                        }
+                        $(likes).text(likesCount);
+                    },
+                    error: function (response) {
+                        console.log("error");
+                    },
+                });
+            });
+            $(document).on("click", ".post__action_likes-list", function () {
+                let parentThis = $(this).closest(".post__main")[0];
+                let postId = $(parentThis).attr("data-id");
+                let isComment = $(parentThis).hasClass("commentPost");
+                $(".likes-list").empty();
+
+                let url = "/posts/likesList/";
+                let type = "post";
+
+                if (isComment) {
+                    url = "/comments/likesList/";
+                    type = "comment";
+                }
+
+                $.ajax({
+                    url: url + postId,
+                    type: "POST",
+                    data: {
+                        _token: "Kzu3W3RUEUefxhsgk8IA1zyAIuHqBTqc9TUjFI7S",
+                        type: type,
+                    },
+                    context: document.body,
+                    success: function (data) {
+                        for (let i = 0; i < data.length; i++) {
+                            $(".likes-list").append(
+                                `
+                                <div class="post" style="margin-bottom: 40px;">
+                                    <div class="post__main"style="margin-bottom: 10px;">
+                                        <div class="post__audio">
+                                            <span class="duration"></span>
+                                            <button class="audioControl"</button>` +
+                                (data[i].user.avatar !== null ?
+                                    '<img class="post__audio-img" src="/upload/avatars/' +
+                                    data[i].user.avatar +
+                                    '" alt="">' :
+                                    "") +
+                                `
+                                            <span class="current-time post__duration"></span>
+                                        </div>
+                                            <div class="post__info">
+                                                <div class="post__header">
+                                                    <div class="post__title"><a href="/profile/${data[i].user.name}">${data[i].user.name}</a></div>
+                                            </div>
+                                            <div class="post__actions"><a class="post__action" href=""></a>
+                                            <a class="post__action" href=""></a>
+                                            <a class="post__action" href=""><i class="icon icon-egg"></i></a>
+                                            <a class="post__action" href=""></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            `
+                            );
+                        }
+                    },
+                    error: function (response) {
+                        console.log("error");
+                    },
+                });
+            });
+            $(document).on("click", ".post__action_comments-list", function () {
+                let parentThis = $(this).closest(".post__main")[0];
+                let isComment = $(parentThis).hasClass("commentPost");
+                let postId = $(parentThis).attr("data-id");
+                $(".comments-list").empty();
+
+                let url = "/comments/list/post/";
+
+                if (isComment) {
+                    url = "/comments/list/comment/";
+                }
+
+                $.ajax({
+                    url: url + postId,
+                    type: "POST",
+                    data: {
+                        _token: "Kzu3W3RUEUefxhsgk8IA1zyAIuHqBTqc9TUjFI7S",
+                    },
+                    context: document.body,
+                    success: function (data) {
+                        if (data.length === 0) {
+                            $(".comments-list").append(`
+                                <div>Нет комментариев</div>
+                            `);
+                        } else {
+                            for (let i = 0; i < data.length; i++) {
+                                $(".comments-list").append(
+                                    `
+                                    <div class="post" style="margin-bottom: 40px;">
+                                        <div class="post__main commentPost" id="commentId-${data[i].id}" data-id="${data[i].id}" style="margin-bottom: 10px;">
+                                            <div class="post__audio">
+                                                <audio class="audio" data-post-id="${data[i].id}" ontimeupdate="updateBar('${data[i].id}', 'comment', this)"
+                                                    src="/upload/audio/${data[i].audio.name}">
+                                                </audio>
+                                                <span class="duration"></span>
+                                                <button class="audioControl" onclick="togglePlaying('${data[i].id}', 'comment', this)"><img src="/img/play_alt.svg"></button>
+                                                <img class="post__audio-img" src="` +
+                                    (data[i].user.avatar !== null ?
+                                        "/upload/avatars/" +
+                                        encodeURIComponent(data[i].user.avatar) +
+                                        '"' :
+                                        '/img/ava2.png" width="64" height="60"') +
+                                    ` alt="">
+                                                <span class="current-time post__duration"></span>
+                                            </div>
+                                            <div class="post__info">
+                                                <div class="post__header">
+                                                    <div class="post__title"><a href="/profile/${data[i].user.name}">${data[i].user.name}</a></div>
+                                                    <div class="post__date">${data[i].dateToString}</div>
+                                                </div>
+                                                <div class="post__actions">
+                                                    <a class="post__action post__action_like` +
+                                    (data[i].isLike ? "_active" : "") +
+                                    `" href=""><i class="fa-regular fa-heart ` +
+                                    (data[i].isLike ? "_shadowed" : "") +
+                                    `"></i></a>
+                                                    <a class="post__action post__action_likes-list popupActivation ` +
+                                    (data[i].isLike ? "_active" : "") +
+                                    `" data-popup="people" href="">${data[i].noLikes}</a>
+                                                    <a class="post__action popupActivation ` +
+                                    (data[i].isComment ? "_active" : "") +
+                                    `" href="" data-to-id="${data[i].id}" data-to-type="comment" data-popup="record_5" data-type-popup="forComment"><i class="icon icon-egg ` +
+                                    (data[i].isComment ? "_shadowed" : "") +
+                                    `"></i></a>
+                                                    <a class="post__action post__action_comments-list popupActivation ` +
+                                    (data[i].isComment ? "_active" : "") +
+                                    `" data-to-id="${data[i].id}" data-to-type="comment" data-popup="comments" href="">${data[i].noComments}</a>
+                                                </div>` +
+                                    (data[i].isMine ?
+                                        `<div class="post__menu">
+                                                    <a class="post__menu-item popupActivation" href="" data-popup="header-menu"><i class="icon icon-menu"></i></a>
+
+                                                    <form style="margin: 0;" id="deleteFormPost${data[i].id}COMMENT" class="post__menu-item _delete" action="/comments/destroy" method="POST">
+                                                        <input type="hidden" name="_token" value="Kzu3W3RUEUefxhsgk8IA1zyAIuHqBTqc9TUjFI7S">
+                        <label class="record__multimedia-item">
+                            <span onclick="confirmDeletePost('${data[i].id}COMMENT')"><i class="icon icon-trash"></i></span>
+                                                            <input type="hidden" name="post_id" value="${data[i].id}">
+                                                        </label>
+                                                    </form>
+                                                </div>` :
+                                        "") +
+                                    `<canvas class="progress"></canvas>
+                                                <input class="comment-time" type="hidden" value="${data[i].created_at}">
+                                            </div>
+                                        </div>` +
+                                    (data[i].photo ?
+                                        `<div class="post__img">
+                                            <img src="/upload/photos/${data[i].photo}" alt="">
+                                        </div>` :
+                                        "") +
+                                    `</div>
+                                `
+                                );
+                            }
+                        }
+                        $(".sorting__item").removeClass("_active");
+                        $(".sorting__item").removeClass("_asc");
+                        $(".sorting__item:first-child").addClass("_active");
+                    },
+                    error: function (response) {
+                        console.log("error");
+                    },
+                });
+            });
+
+            $(".popup[data-popup='comments']").on(
+                "click",
+                ".sorting__item",
+                function (e) {
+                    e.preventDefault();
+                    let isActive = $(this).hasClass("_active");
+                    let sortByQuery, order;
+                    let comments = $.parseHTML($(".comments-list").html()).filter(
+                        (el) => {
+                            return el.nodeType != Node.TEXT_NODE;
+                        }
+                    );
+
+                    if (!isActive) {
+                        //Make it active
+                        $(".sorting__item").removeClass("_active");
+                        $(".sorting__item").removeClass("_asc");
+                        $(this).addClass("_active");
+                    } else {
+                        //Toggle asc/desc
+                        if ($(this).hasClass("_asc")) {
+                            $(this).removeClass("_asc");
+                        } else {
+                            $(this).addClass("_asc");
+                        }
+                    }
+
+                    order = $(this).hasClass("_asc") ? "asc" : "desc";
+
+                    if ($(this).is(":first-child"))
+                        //Date
+                        sortByQuery = ".comment-time";
+                    else if ($(this).is(":nth-child(2)"))
+                        //Likes
+                        sortByQuery = ".post__action:nth-child(2)";
+                    else if ($(this).is(":nth-child(3)"))
+                        //Comments
+                        sortByQuery = ".post__action:nth-child(4)";
+
+                    comments.sort((a, b) => {
+                        let numA, numB;
+
+                        if (sortByQuery === ".comment-time") {
+                            numA = Date.parse(a.querySelector(sortByQuery).value);
+                            numB = Date.parse(b.querySelector(sortByQuery).value);
+                        } else {
+                            numA = parseInt(a.querySelector(sortByQuery).innerText);
+                            numB = parseInt(b.querySelector(sortByQuery).innerText);
+                        }
+
+                        if (order === "asc") return numA - numB;
+                        else return numB - numA;
+                    });
+
+                    $(".comments-list").html(comments);
+                }
+            );
+        });
+
+        function copyToCliboard(postId) {
+            let copyText = location.origin + "/profile/" + "#" + "postId-" + postId;
+            navigator.clipboard.writeText(copyText);
+            alert("ссылка скопирована");
+        }
+    </script>
+</body>
+
+</html>
