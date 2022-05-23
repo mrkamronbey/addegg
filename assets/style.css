@@ -3818,7 +3818,7 @@ img {
    }
    .section__top-background{
        background: #fff !important;
-       /* color: #000000 !important; */
+       color: #000000 !important;
        border-bottom: 1px solid #909090;
    }
    .post__message-date{
@@ -3901,6 +3901,7 @@ img {
     color: #fff !important;
 }
 .message__icon{
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
